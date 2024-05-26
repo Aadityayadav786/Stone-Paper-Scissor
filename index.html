@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stone Paper Scissor</title>
+<head>
+<script>
+
+console.log("Enter Stone / PAPER / Scissor");
+alert("Enter okay to play this GAME");
+let user = prompt("Enter s for Stone / p for PAPER / c for Scissor");
+
+function getRandomChar() {
+    const chars = ['s', 'p', 'c'];
+    const randomIndex = Math.floor(Math.random() * chars.length);
+    return chars[randomIndex];
+}
+
+let comp = getRandomChar();
+
+if (user === comp) {
+    alert("DRAW");
+} else if ((user === "c" && comp === "p") || (user === "p" && comp === "s") || (user === "s" && comp === "c")) {
+    alert("You won!");
+} else {
+    alert("You Lost!");
+}
+
+alert("User: " + user + "\nComputer: " + comp);
+
+
+
+</script>
+
+</head>
+</body>
+</html>
